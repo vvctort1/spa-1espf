@@ -12,7 +12,7 @@ export const ListaProduto=[
         preco:55.50
     },
     {
-        id:1,
+        id:3,
         nome:"Monitor",
         desc:"Monitor de 32' 75Hz.",
         preco:400
