@@ -9,8 +9,6 @@ import { Outlet } from "react-router-dom";
 
 export default function App(){
 
-  let viteLogoAlt = "Vite Logo";
-
   return(
     <>
     <h1 className={style.titulo}>APP - Componente principal!</h1>
