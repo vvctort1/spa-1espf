@@ -19,7 +19,11 @@
                 text-align: center;
             }
 
-            &:last-child{   /* alinhando somente os tds da coluna Preço no centro */
+            &:nth-child(4){   /* alinhando somente os tds da coluna Preço no centro */
+                text-align: center;
+            }
+
+            &:nth-child(5){
                 text-align: center;
             }
         }
