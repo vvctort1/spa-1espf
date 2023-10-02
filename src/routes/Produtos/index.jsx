@@ -2,11 +2,31 @@ import { ListaProduto } from "../../components/ListaProdutos"
 import style from "./Produtos.module.css";
 import { Link } from "react-router-dom";
 import { BiEdit as Editar } from "react-icons/bi";
+import { useEffect, useState } from "react";
 
 
 export default function Produtos(){
 
     document.title = "Lista de Produtos";
+
+    const [listaProdutosApi, setListaProdutosApi] = useState([]);
+
+    //função para controlar o fluxo de execução, nesse caso criamos um array de dependencias
+    useEffect(()=>{
+
+        //Realizando o Request
+        fetch("http://localhost:5000/produtos")
+        //Recebendo o Response e transformando em json
+        //então
+        //Transformando o dado textificado pelo http em json
+        .then((response)=> response.json())
+        //Exibindo os dados no console
+        .then((response)=> setListaProdutosApi(response))
+        //Exibindo caso ocorra algum erro
+        .catch(error=> console.log(error))
+
+    },[])
+
 
     return(
         <main>
@@ -23,7 +43,7 @@ export default function Produtos(){
                     </tr>
                 </thead>
                 <tbody>
-                    {ListaProduto.map((item, indice)=>
+                    {listaProdutosApi.map((item, indice)=>
                         <tr key={indice} className={style.lineTbl}>
                             <td>{item.id}</td>
                             <td>{item.nome}</td>
