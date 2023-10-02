@@ -1,8 +1,6 @@
 
 import Cabecalho from "./components/Cabecalho"
-import Conteudo from "./components/Conteudo";
 import Rodape from "./components/Rodape";
-import viteLogo from "./assets/vite.svg";
 import style from "./App.module.css";
 import { Outlet } from "react-router-dom";
 
