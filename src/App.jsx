@@ -1,5 +1,5 @@
 
-import Cabecalho from "./components/Cabecalho"
+import Cabecalho from "./components/Cabecalho/Cabecalho"
 import Rodape from "./components/Rodape";
 import style from "./App.module.css";
 import { Outlet } from "react-router-dom";
