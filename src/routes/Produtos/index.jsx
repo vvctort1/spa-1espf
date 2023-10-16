@@ -3,6 +3,7 @@ import style from "./Produtos.module.css";
 import { Link } from "react-router-dom";
 import { BiEdit as Editar } from "react-icons/bi";
 import { useEffect, useState } from "react";
+import ModalAction from "../../components/ModalAction/ModalAction";
 
 
 export default function Produtos(){
@@ -27,10 +28,15 @@ export default function Produtos(){
 
     },[])
 
+    const [open, setOpen] = useState(false)
 
     return(
         <main>
             <h1>Produtos</h1>
+
+            <ModalAction open={open} setClose={setOpen}/>
+
+            <button onClick={()=>setOpen(true)}>OPEN - MODAL</button>
 
             <table className={style.tblEstilo}>
                 <thead>
