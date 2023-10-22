@@ -13,15 +13,15 @@
       "preco": "40"
     },
     {
-      "nome": "Ricardo otario",
-      "desc": "mt otarrio",
-      "preco": "2389,22",
+      "nome": "Luminaria",
+      "desc": "Branca",
+      "preco": "50",
       "id": 8
     },
     {
-      "nome": "",
-      "desc": "",
-      "preco": "",
+      "nome": "Kindle",
+      "desc": "Preto",
+      "preco": "300",
       "id": 9
     }
   ]
