@@ -59,7 +59,6 @@ export default function EditarProduto(){
             headers:{
                 "Content-Type":"application/json"
             },
-            // stringify transforma o json em texto (chamado de serialização)
             body: JSON.stringify(produto)
         })
         .then((response) => response.json())

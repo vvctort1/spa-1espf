@@ -30,24 +30,16 @@ export default function Produtos(){
 
     const [open, setOpen] = useState(false)
 
+    const handleDelete = (id) => {
 
-    let post_produto = {
-        id: 4,
-        nome: "Nome do produto",
-        desc: "Desc do produto",
-        preco: 220
-    };
+        fetch(`http://localhost:5000/produtos/${id}`,{
+            method: "DELETE",
+        })
 
-    fetch("http://localhost:5000/produtos",{
-        method: "POST",
-        body: JSON.stringify(post_produto),
-        headers: {
-            "Content-type": "application/json; charset=UTF-8",
-        },
-    })
-    .then(response => response.json())
-    .then(produto => console.log(produto))
-    .catch(error => console.log(error));
+        .then(()=>window.location = '/produtos')
+        .then(response => console.log(response.status))
+        .catch(error => console.log(error));
+    }
 
     return(
         <main>
@@ -56,7 +48,7 @@ export default function Produtos(){
             <ModalAction open={open} setClose={setOpen}/>
 
             <button onClick={()=>setOpen(true)}>OPEN - MODAL</button>
-            <button>Adicionar produto</button>
+            <Link to='/adicionar/produtos'>Adicionar Produto</Link>
 
             <table className={style.tblEstilo}>
                 <thead>
@@ -77,7 +69,7 @@ export default function Produtos(){
                             <td>{item.desc}</td>
                             <td>{item.preco}</td>
                             <td><Link to={`/editar/produtos/${item.id}`}><Editar/></Link></td>
-                            <td><Link>Trash</Link></td>
+                            <td><button onClick={()=>handleDelete(item.id)}>Deletar</button></td>
                         </tr>
                 )}
 
