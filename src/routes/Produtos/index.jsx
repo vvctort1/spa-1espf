@@ -1,7 +1,8 @@
-import { ListaProduto } from "../../components/ListaProdutos"
+
 import style from "./Produtos.module.css";
 import { Link } from "react-router-dom";
 import { BiEdit as Editar } from "react-icons/bi";
+import { FaTrash as Deletar } from "react-icons/fa"
 import { useEffect, useState } from "react";
 import ModalAction from "../../components/ModalAction/ModalAction";
 
@@ -47,13 +48,11 @@ export default function Produtos(){
 
             <ModalAction open={open} setClose={setOpen}/>
 
-            <button onClick={()=>setOpen(true)}>OPEN - MODAL</button>
-            <Link to='/adicionar/produtos'>Adicionar Produto</Link>
+            <button onClick={()=>setOpen(true)} className={style.botaoAdicionar}>Adicionar</button>
 
             <table className={style.tblEstilo}>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>NOME</th>
                         <th>DESCRIÇÃO</th>
                         <th>PREÇO</th>
@@ -64,21 +63,15 @@ export default function Produtos(){
                 <tbody>
                     {listaProdutosApi.map((item, indice)=>
                         <tr key={indice} className={style.lineTbl}>
-                            <td>{item.id}</td>
                             <td>{item.nome}</td>
                             <td>{item.desc}</td>
                             <td>{item.preco}</td>
                             <td><Link to={`/editar/produtos/${item.id}`}><Editar/></Link></td>
-                            <td><button onClick={()=>handleDelete(item.id)}>Deletar</button></td>
+                            <td><Link  onClick={()=>handleDelete(item.id)}><Deletar/></Link></td>
                         </tr>
                 )}
 
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <td colSpan={6}>PRODUTOS INFORMÁTICOS - QTD = {ListaProduto.length}</td>
-                    </tr>
-                </tfoot>
 
 
             </table>

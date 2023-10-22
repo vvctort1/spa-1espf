@@ -1,12 +1,6 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "nome": "Tecla",
-      "desc": "Gol",
-      "preco": "220000"
-    },
-    {
       "id": 3,
       "nome": "Monitor",
       "desc": "Monitor de 32' 75Hz.",
@@ -23,6 +17,12 @@
       "desc": "Preto",
       "preco": "300",
       "id": 9
+    },
+    {
+      "nome": "Teclado",
+      "desc": "abnt",
+      "preco": "200",
+      "id": 10
     }
   ]
 }

@@ -5,7 +5,6 @@ import Home from './routes/Home/index.jsx';
 import Produtos from './routes/Produtos/index.jsx';
 import EditarProdutos from './routes/EditarProdutos/index.jsx';
 import Error404 from './routes/Error404/index.jsx';
-import AdicionarProdutos from './routes/AdicionarProdutos/index.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,11 +23,7 @@ const router = createBrowserRouter([
       {
         path:'/editar/produtos/:id',
         element:<EditarProdutos/>
-      },
-      {
-        path: '/adicionar/produtos',
-        element:<AdicionarProdutos/>
-      }  
+      } 
     ]
   }
 ])

@@ -38,22 +38,20 @@ export default function ModalAction(props) {
 
     if(props.open){
         return (
-          <div className="modal">
-              <h1>MODAL</h1>
-              <button onClick={()=>props.setClose(false)}>CLOSE</button>
-
+            <div className="modal">
               <div className="inserirProduto">
+                <h2>Novo Produto</h2>
                 <form onSubmit={()=> handlePost(produto)}>
-                    <fieldset>
-                        <legend >Novo Produto</legend>
                         <label htmlFor="idNome">Nome</label>
                         <input type="text" name="nome" id="idNome" value={produto.nome} onChange={handleChange}/>
                         <label htmlFor="idDesc">Descrição</label>
                         <input type="text" name="desc" id="idDesc" value={produto.desc} onChange={handleChange}/>
                         <label htmlFor="idPreco">Preço</label>
                         <input type="text" name="preco" id="idPreco" value={produto.preco} onChange={handleChange}/>
-                        <input type="submit" value="Criar" />
-                    </fieldset>
+                        <div className="divBotoes">
+                            <input type="submit" value="Adicionar" />
+                            <button onClick={()=>props.setClose(false)}>Cancelar</  button>
+                        </div>
                 </form>
               </div>
 

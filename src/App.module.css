@@ -12,9 +12,11 @@
 }
 
 .container{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #506266;
 
     & section{
         margin: 0 20%;
