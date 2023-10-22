@@ -1,82 +1,28 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "nome": "Tecla",
-      "desc": "T",
-      "preco": "220000"
-    },
-    {
-      "id": 2,
-      "nome": "Mouse",
-      "desc": "Mouse com fio",
-      "preco": 55.5
-    },
-    {
       "id": 3,
       "nome": "Monitor",
       "desc": "Monitor de 32' 75Hz.",
       "preco": "40"
     },
     {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
+      "nome": "Luminaria",
+      "desc": "Branca",
+      "preco": "50",
       "id": 8
     },
     {
+      "nome": "Kindle",
+      "desc": "Preto",
+      "preco": "300",
       "id": 9
     },
     {
+      "nome": "Teclado",
+      "desc": "abnt",
+      "preco": "200",
       "id": 10
-    },
-    {
-      "id": 11
-    },
-    {
-      "id": 12
-    },
-    {
-      "id": 13
-    },
-    {
-      "id": 14
-    },
-    {
-      "id": 15
-    },
-    {
-      "id": 16
-    },
-    {
-      "id": 17
-    },
-    {
-      "id": 18
-    },
-    {
-      "id": 19
-    },
-    {
-      "id": 20
-    },
-    {
-      "id": 21
-    },
-    {
-      "id": 22
-    },
-    {
-      "id": 23
     }
   ]
 }

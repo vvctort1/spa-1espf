@@ -1,4 +1,4 @@
-
+import "./EditarProdutos.scss"
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 // import { ListaProduto } from "../../components/ListaProdutos";
@@ -59,7 +59,6 @@ export default function EditarProduto(){
             headers:{
                 "Content-Type":"application/json"
             },
-            // stringify transforma o json em texto (chamado de serialização)
             body: JSON.stringify(produto)
         })
         .then((response) => response.json())
@@ -81,24 +80,13 @@ export default function EditarProduto(){
               */}
              <div>
                 <form onSubmit={handleSubmit}>
-                    <fieldset>
-                        <legend>Produto Selecionado</legend>
-                        <div>
                             <label htmlFor="">Nome: </label>
                             <input type="text" name="nome" placeholder="Digite o nome do Produto" value={produto.nome} onChange={handleChange}/>
-                        </div>
-                        <div>
                             <label htmlFor="">Descrição: </label>
                             <input type="text" name="desc" placeholder="Digite a descrição do Produto" value={produto.desc} onChange={handleChange}/>
-                        </div>
-                        <div>
                             <label htmlFor="">Preço: </label>
                             <input type="text" name="preco" placeholder="Digite o preço do Produto" value={produto.preco} onChange={handleChange}/>
-                        </div>
-                        <div>
-                            <button>Editar</button>
-                        </div>
-                    </fieldset>
+                            <button className="botaoEditar">Editar</button>
                 </form>
              </div>
         </div>

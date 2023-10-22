@@ -6,4 +6,78 @@
     top: 0;
     left: 0;
     z-index: 1000;
+    color: white;
+
+    .inserirProduto{
+        background-color: #999;
+        margin: 10% 40%;
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid greenyellow;
+
+        h2{
+            color: #000;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+
+           label{
+            margin-top: 10px;
+            color: #000;
+           }
+
+           input[type=text]{
+                background-color: #f5dd9d;
+                border-radius: 4px;
+                height: 30px;
+                padding: 10px;
+           }
+
+           .divBotoes{
+                display: flex;
+                flex-direction: row;
+                margin-top: 30px;
+                justify-content: space-evenly;
+
+               input[type=submit]{
+                    width: 30%;
+                    background-color: #506266;
+                    color: #f5dd9d;
+                    border-radius: 5px;
+                    height: 25px;
+
+                    
+                    &:hover{
+                        background-color: #334245;
+    
+                    }
+    
+                    &:active{
+                        background-color: #f5dd9d;
+                        color: #506266;
+                    }
+                }
+                
+                button{
+                    width: 30%;
+                    background-color: #7b8f8a;
+                    color: #f5dd9d;
+                    border-radius: 5px;
+                    height: 25px;
+                    
+                    &:hover{
+                        background-color: #334245;
+    
+                    }
+    
+                    &:active{
+                        background-color: #f5dd9d;
+                        color: #506266;
+                    }
+                }
+           }
+        }
+    }
 }

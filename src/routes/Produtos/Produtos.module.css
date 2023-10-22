@@ -1,41 +1,60 @@
-.tblEstilo{
-    border-collapse: collapse;
-    border: 2px solid black;
 
-    & th{
-        border: 2px solid black;
-        background-color: lightgreen;
-        padding: 5px;
+main{
+    margin-top: 40px;
+
+    & h1{
+        text-align: center;
     }
 
-    & .lineTbl{
-        background-color: lightskyblue;
+    & .botaoAdicionar{
+        margin: 20px 200px;
+        border-radius: 7px;
+        padding: 8px;
+        background-color: #92a68a;
+        color: #000;
+        font-weight: bold;
 
-        & td{
-            border: 2px solid black;
-            padding: 5px;
+        &:hover{
+            background-color: #334245;
+            color: #f5dd9d;
+        }
 
-            &:first-child{   /* alinhando somente os tds da coluna ID no centro */
-                text-align: center;
-            }
-
-            &:nth-child(4){   /* alinhando somente os tds da coluna Preço no centro */
-                text-align: center;
-            }
-
-            &:nth-child(5){
-                text-align: center;
-            }
+        &:active{
+            background-color: #f5dd9d;
+            color: #506266;
         }
     }
 
-    & tfoot{
-        background-color: #ccc;
-
-        & td{
+    .tblEstilo{
+        border-collapse: collapse;
+        border: 2px solid black;
+        margin-bottom: 40px;
+    
+        & th{
             border: 2px solid black;
+            background-color: #bcc499;
             padding: 5px;
-            text-align: center;
+        }
+    
+        & .lineTbl{
+            background-color: #f5dd9d;
+    
+            & td{
+                border: 2px solid black;
+                padding: 5px;
+    
+                &:first-child{   /* alinhando somente os tds da coluna ID no centro */
+                    text-align: center;
+                }
+    
+                &:nth-child(4){   /* alinhando somente os tds da coluna Preço no centro */
+                    text-align: center;
+                }
+    
+                &:nth-child(5){
+                    text-align: center;
+                }
+            }
         }
     }
 }

@@ -1,0 +1,46 @@
+div{
+
+    h1{
+        margin: 20px;
+    }
+
+    div{
+
+        form{
+            display: flex;
+            flex-direction: column;
+            
+            label{
+                margin-top: 10px;
+                color: #000;
+               }
+    
+               input[type=text]{
+                    background-color: #f5dd9d;
+                    border-radius: 4px;
+                    height: 30px;
+                    padding: 10px;
+               }
+
+               .botaoEditar{
+                margin: 10px 30%;
+                height: 30px;
+                border-radius: 4px;
+                margin-bottom: 90px;
+                background-color: #7b8f8a;
+                color: #f5dd9d;
+                
+                    &:hover{
+                    background-color: #506266;
+
+                    }
+
+                    &:active{
+                        background-color: #f5dd9d;
+                        color: #506266;
+                    }
+
+               }
+        }
+    }
+}
