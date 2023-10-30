@@ -72,7 +72,13 @@ export default function Produtos(){
                 )}
 
                 </tbody>
-
+                <tfoot>
+                  <tr>
+                    <td colSpan={5}>
+                      PRODUTOS INFORMÁTICOS - QTD = {listaProdutosApi.length}
+                    </td>
+                  </tr>
+                </tfoot>
 
             </table>
         </main>
