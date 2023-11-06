@@ -42,45 +42,50 @@ export default function Produtos(){
         .catch(error => console.log(error));
     }
 
-    return(
-        <main>
-            <h1>Produtos</h1>
-
-            <ModalAction open={open} setClose={setOpen}/>
-
-            <button onClick={()=>setOpen(true)} className={style.botaoAdicionar}>Adicionar</button>
-
-            <table className={style.tblEstilo}>
-                <thead>
-                    <tr>
-                        <th>NOME</th>
-                        <th>DESCRIÇÃO</th>
-                        <th>PREÇO</th>
-                        <th>Editar</th>
-                        <th>Deletar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {listaProdutosApi.map((item, indice)=>
-                        <tr key={indice} className={style.lineTbl}>
-                            <td>{item.nome}</td>
-                            <td>{item.desc}</td>
-                            <td>{item.preco}</td>
-                            <td><Link to={`/editar/produtos/${item.id}`}><Editar/></Link></td>
-                            <td><Link  onClick={()=>handleDelete(item.id)}><Deletar/></Link></td>
+    if (sessionStorage.getItem("token-")) {
+        return(
+            <main>
+                <h1>Produtos</h1>
+    
+                <ModalAction open={open} setClose={setOpen}/>
+    
+                <button onClick={()=>setOpen(true)} className={style.botaoAdicionar}>Adicionar</button>
+    
+                <table className={style.tblEstilo}>
+                    <thead>
+                        <tr>
+                            <th>NOME</th>
+                            <th>DESCRIÇÃO</th>
+                            <th>PREÇO</th>
+                            <th>Editar</th>
+                            <th>Deletar</th>
                         </tr>
-                )}
+                    </thead>
+                    <tbody>
+                        {listaProdutosApi.map((item, indice)=>
+                            <tr key={indice} className={style.lineTbl}>
+                                <td>{item.nome}</td>
+                                <td>{item.desc}</td>
+                                <td>{item.preco}</td>
+                                <td><Link to={`/editar/produtos/${item.id}`}><Editar/></Link></td>
+                                <td><Link  onClick={()=>handleDelete(item.id)}><Deletar/></Link></td>
+                            </tr>
+                    )}
+    
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colSpan={5}>
+                          PRODUTOS INFORMÁTICOS - QTD = {listaProdutosApi.length}
+                        </td>
+                      </tr>
+                    </tfoot>
+    
+                </table>
+            </main>
+        )
+    } else {
+        window.location = "/login"
+    }
 
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td colSpan={5}>
-                      PRODUTOS INFORMÁTICOS - QTD = {listaProdutosApi.length}
-                    </td>
-                  </tr>
-                </tfoot>
-
-            </table>
-        </main>
-    )
 }

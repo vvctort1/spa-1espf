@@ -38,6 +38,19 @@ export default function Login() {
         //REALIZANDO A COMPARAÇÃO DE FATO!
         if (user.email == usuario.email && user.senha == usuario.senha){
             alert("Login realizado com sucesso!")
+
+            //Criando a autenticação
+            //Criando o token do usuário com 16 digitos alfanuméricos
+            const tokenUser = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);
+
+            console.log(tokenUser);
+
+            //Criando o SessionStorage
+            sessionStorage.setItem("token-user",tokenUser);
+            //Adicionando os dados do Usuário na sessão:
+            sessionStorage.setItem("data-user", JSON.stringify(users[x]));
+
+            // REDIRECIONANDO O USUÁRIO PARA A PÁGINA HOME!
             navigate('/',{replace: true})
 
             return;
